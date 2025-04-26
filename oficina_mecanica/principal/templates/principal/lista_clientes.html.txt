@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Clientes</title>
+</head>
+<body>
+    <h1>Lista de Clientes</h1>
+    <ul>
+        {% for cliente in clientes %}
+        <li>{{ cliente.nome }} - Telefone: {{ cliente.telefone|default:"Não informado" }}</li>
+        {% empty %}
+        <li>Nenhum cliente cadastrado.</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Voltar</a>
+</body>
+</html>
